@@ -99,18 +99,47 @@
 
 // ================================ Type Conversion, Type Coercion ===================================
 
-const age = 18 + Number("30");
-console.log(age);
+// const age = 18 + Number("30");
+// console.log(age);
 
-const year = "20" + String(23);
-console.log(year);
+// const year = "20" + String(23);
+// console.log(year);
 
-console.log(Number("Book"));
-console.log(typeof NaN);
+// console.log(Number("Book"));
+// console.log(typeof NaN);
 
-console.log(30 - "20");
-console.log(100 / "5");
+// console.log(30 - "20");
+// console.log(100 / "5");
 
-const number = 10 + "1";
-console.log(typeof number);
-console.log(number - 1);
+// const number = 10 + "1";
+// console.log(typeof number);
+// console.log(number - 1);
+
+// ================================ CODING CHALLENGE 1 =========================
+/*
+Omid and Jawid are trying to compare their BMI (Body Mass Index), which is calculated using the formula: BMI = mass / height ** 2 = mass / (height * height). (mass in kg and height in meter).
+
+1. Store Omid's and Jawid's mass and height in variables
+2. Calculate both their BMIs using the formula (you can even implement both versions)
+3. Create a boolean variable 'OmidHigherBMI' containing information about whether Omid has a higher BMI than Jawid.
+
+TEST DATA 1: Omids weights 78 kg and is 1.69 m tall. Jawid weights 92 kg and is 1.95 m tall.
+TEST DATA 2: Omids weights 95 kg and is 1.88 m tall. Jawid weights 85 kg and is 1.76 m tall.
+
+GOOD LUCK 😀
+*/
+
+const omidMass = 78;
+const omidHeight = 1.69;
+const jawidMass = 92;
+const jawidHeight = 1.95;
+
+const BMIOmid = omidMass / omidHeight ** 2;
+const BMIJawid = jawidMass / jawidHeight ** 2;
+const OimdHeigherBMI = BMIOmid - BMIJawid;
+
+if (OimdHeigherBMI) {
+  console.log("omid has a higher BMI");
+} else {
+  console.log("omid doesnt have higher bmi");
+}
