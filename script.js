@@ -129,17 +129,74 @@ TEST DATA 2: Omids weights 95 kg and is 1.88 m tall. Jawid weights 85 kg and is 
 GOOD LUCK 😀
 */
 
-const omidMass = 78;
-const omidHeight = 1.69;
-const jawidMass = 92;
-const jawidHeight = 1.95;
+// const omidMass = 78;
+// const omidHeight = 1.69;
+// const jawidMass = 92;
+// const jawidHeight = 1.95;
 
-const BMIOmid = omidMass / omidHeight ** 2;
-const BMIJawid = jawidMass / jawidHeight ** 2;
-const OimdHeigherBMI = BMIOmid - BMIJawid;
+// const BMIOmid = omidMass / omidHeight ** 2;
+// const BMIJawid = jawidMass / jawidHeight ** 2;
+// const OimdHeigherBMI = BMIOmid - BMIJawid;
 
-if (OimdHeigherBMI) {
-  console.log("omid has a higher BMI");
-} else {
-  console.log("omid doesnt have higher bmi");
-}
+// if (OimdHeigherBMI) {
+//   console.log("omid has a higher BMI");
+// } else {
+//   console.log("omid doesnt have higher bmi");
+// }
+
+// ============================ if else =========================
+// const firstName = "Sara";
+// const birthYear = 2024;
+// const currentYear = 2023;
+// const person = currentYear - birthYear;
+
+// const test = true;
+// if (!test) {
+//   console.log("truthy");
+// } else {
+//   console.log("falsy");
+// }
+
+// ============================= Falsy Value ======================
+/* Falsy Values are Five:
+1. false
+2. 0
+3. null
+4. ""
+5. undefined
+
+*/
+
+// ============================ Boolean Logic ====================
+
+/* 
+1. true
+2. false
+
+and  
+        true    false
+          A       B
+true  A true    false
+
+false B false   false
+
+
+or 
+          true        false
+            A           B
+true   A  true        true
+false  B  true        false
+
+1. Diploma
+2. Exprience
+3. not old
+
+*/
+
+const hasDiploma = false;
+const hasExprience = true;
+const isOld = false;
+
+if (hasDiploma || hasExprience || !isOld) {
+  console.log("You are hired!");
+} else console.log("You are not hired!");
