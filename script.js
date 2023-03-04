@@ -193,10 +193,89 @@ false  B  true        false
 
 */
 
-const hasDiploma = false;
-const hasExprience = true;
-const isOld = false;
+// const hasDiploma = false;
+// const hasExprience = true;
+// const isOld = false;
 
-if (hasDiploma || hasExprience || !isOld) {
-  console.log("You are hired!");
-} else console.log("You are not hired!");
+// if (hasDiploma || hasExprience || !isOld) {
+//   console.log("You are hired!");
+// } else console.log("You are not hired!");
+
+// ====================== Switch Case Statement =================================
+// We have just one
+// const day = "یکشنبه";
+
+// switch (day) {
+//   case "Saturday":
+//     console.log("I design websites");
+//     break;
+//   case "Sunday":
+//     console.log("I work in garden");
+//     console.log("I swim");
+//     break;
+//   case "Monday":
+//     break;
+//   case "Tuesday":
+//     console.log("I go to picnic");
+//     break;
+//   case "Wednesday":
+//     console.log("I work with JavaScript");
+//     break;
+//   case "Thursay":
+//     break;
+//   case "Friday":
+//     console.log("Enjoy your Friday");
+//     break;
+//   default:
+//     console.log("Enter a valid day");
+// }
+
+// ========================== Assignment operators ================
+// let book = 10;
+
+// book += 1;
+// console.log(book);
+
+// book -= 2;
+// console.log(book);
+
+// book *= 2;
+// console.log(book);
+
+// book %= 4;
+// console.log(book);
+
+// book **= 2;
+// ---------------------------  == and ===  -----------------------------
+// const age = "18";
+// if (age == 18) {
+//   console.log("You are now Adult");
+// } else {
+//   console.log("You are not 18");
+// }
+
+// =========================== statement and Expression ==========================
+// expression
+// console.log(10 + 12);
+
+// 30 ** 10;
+// const salary = 1000;
+
+// // statement
+// if (salary >= 1000) {
+//   console.log(`You have more than ${salary} salary 😁`);
+// }
+
+// ========================= Ternery Operator ======================
+// const age = 29;
+
+// if (age >= 18) {
+//   console.log("You can drive car");
+
+// } else {
+//   console.log("you can not drive car!!");
+// }
+
+// const driving = age >= 18 ? "you can drive car" : "you can not drive car";
+
+// console.log(driving);
