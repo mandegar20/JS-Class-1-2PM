@@ -279,3 +279,80 @@ false  B  true        false
 // const driving = age >= 18 ? "you can drive car" : "you can not drive car";
 
 // console.log(driving);
+
+// ============================== Function ===========================
+/* 
+What is function?
+
+        DRY 
+
+        Juice     Machine 
+                  input  
+                  output 
+
+*/
+
+// // Declare
+// function printer() {
+//   console.log("This is a function");
+//   console.log("This is a function");
+//   console.log("This is a function");
+//   console.log("This is a function");
+//   console.log("This is a function");
+//   console.log("This is a function");
+//   console.log("This is a function");
+// }
+
+// // Envoke
+// printer();
+// printer();
+// printer();
+
+// Outline of a function syntax
+// function nameOfFunction(parameter) {
+//   // ...
+//   return `this is something`;
+// }
+
+// nameOfFunction(argument);
+
+// function juiceMachine(apple, orange) {
+//   console.log(typeof apple);
+//   if (typeof apple == "number" && typeof orange == "number") {
+//     return `I am making ${apple} apples and ${orange} oranges juice`;
+//   } else {
+//     return `Please Enter a number`;
+//   }
+// }
+
+// console.log(juiceMachine(2, 3));
+
+// =========== Function declaration & Function Expression ==================
+
+// // Function declaration
+// const birthYear1 = 2020;
+
+// function getAge1(birthYear) {
+//   return 2023 - birthYear;
+// }
+// console.log(getAge1(birthYear1));
+
+// // Function Expression
+// const birthYear2 = 1900;
+// const getAge2 = function (birthYear) {
+//   return 2023 - birthYear;
+// };
+// console.log(getAge2(birthYear2));
+// getAge2(1995);
+
+// ======================= Arrow Function =======================================
+
+// const getAgeExpression = function (birthyear, deathyear) {
+//   return `He lived ${deathyear - birthyear} years`;
+// };
+
+// const getAgeArrow = (birthyear, deathyear) => {
+//   return `He lived ${deathyear - birthyear} years`;
+// };
+// console.log(getAgeExpression(2000, 2080));
+// console.log(getAgeArrow(2000, 2080));
