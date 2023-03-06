@@ -331,6 +331,7 @@ What is function?
 
 // // Function declaration
 // const birthYear1 = 2020;
+// getAge1(1999);
 
 // function getAge1(birthYear) {
 //   return 2023 - birthYear;
@@ -356,3 +357,79 @@ What is function?
 // };
 // console.log(getAgeExpression(2000, 2080));
 // console.log(getAgeArrow(2000, 2080));
+
+// ============= Calling Function into another function ==================
+// function calcAge(birthYear) {
+//   return 2023 - birthYear;
+// }
+
+// function getInfo(firstName, lastName, yearofBirth) {
+//   const age = calcAge(yearofBirth);
+//   return `${firstName} ${lastName} is a student and he is ${age} years old`;
+// }
+
+// const information = getInfo("Ahmad", "Mohammadi", 1999);
+// console.log(information);
+
+// console.log(printJuiceMachine(2, 3));
+
+// function getFruitPieces(fruitAmount) {
+//   return fruitAmount * 4;
+// }
+
+// function printJuiceMachine(apple, orange) {
+//   const applePieces = getFruitPieces(apple);
+//   const orangePieces = getFruitPieces(orange);
+
+//   return `juice with ${applePieces} pieces of apple and ${orangePieces} pieces of orange`;
+// }
+
+/// ================= Array =====================================
+const name = "wajid";
+const lastName = "Akhtari";
+const birthYear = "1970";
+
+const studentInformation = ["wajid", "Akhtari", 1970, true, null, false];
+console.log(studentInformation[2]);
+console.log(studentInformation[0]);
+
+studentInformation.pop();
+console.log(studentInformation);
+
+studentInformation.unshift(001);
+console.log(studentInformation);
+
+studentInformation.shift();
+console.log(studentInformation);
+
+studentInformation.push("Afghanistan");
+console.log(studentInformation);
+
+console.log(studentInformation.indexOf(1970));
+
+console.log(studentInformation[studentInformation.length - 1]);
+
+console.log(studentInformation.includes("kabul"));
+
+/// ================================== Objects ===================
+// const ahmad = ["mohammadi", "Afghanistan", "Kabul", 26];
+
+// // key value pairs  (key: value)
+// const student = {
+//   firstName: "Ahmad",
+//   lastName: "Mohammadi",
+//   country: "Afghanistan",
+//   age: 26,
+// };
+
+// // Dot
+// console.log(student.firstName);
+// console.log(student.age);
+// const country = student.country;
+
+// // Square Bracket
+// console.log(student["firstName"]);
+// const lastName = student["lastName"];
+
+// const name = "Name";
+// console.log;
