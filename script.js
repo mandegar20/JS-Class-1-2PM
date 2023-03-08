@@ -385,51 +385,77 @@ What is function?
 // }
 
 /// ================= Array =====================================
-const name = "wajid";
-const lastName = "Akhtari";
-const birthYear = "1970";
+// const name = "wajid";
+// const lastName = "Akhtari";
+// const birthYear = "1970";
 
-const studentInformation = ["wajid", "Akhtari", 1970, true, null, false];
-console.log(studentInformation[2]);
-console.log(studentInformation[0]);
+// const studentInformation = ["wajid", "Akhtari", 1970, true, null, false];
+// console.log(studentInformation[2]);
+// console.log(studentInformation[0]);
 
-studentInformation.pop();
-console.log(studentInformation);
+// studentInformation.pop();
+// console.log(studentInformation);
 
-studentInformation.unshift(001);
-console.log(studentInformation);
+// studentInformation.unshift(001);
+// console.log(studentInformation);
 
-studentInformation.shift();
-console.log(studentInformation);
+// studentInformation.shift();
+// console.log(studentInformation);
 
-studentInformation.push("Afghanistan");
-console.log(studentInformation);
+// studentInformation.push("Afghanistan");
+// console.log(studentInformation);
 
-console.log(studentInformation.indexOf(1970));
+// console.log(studentInformation.indexOf(1970));
 
-console.log(studentInformation[studentInformation.length - 1]);
+// console.log(studentInformation[studentInformation.length - 1]);
 
-console.log(studentInformation.includes("kabul"));
+// console.log(studentInformation.includes("kabul"));
 
 /// ================================== Objects ===================
-// const ahmad = ["mohammadi", "Afghanistan", "Kabul", 26];
 
-// // key value pairs  (key: value)
-// const student = {
-//   firstName: "Ahmad",
-//   lastName: "Mohammadi",
-//   country: "Afghanistan",
-//   age: 26,
-// };
+const studentInformation = ["qasem", "mohammadi", 21, "Afghanistan"];
+const friends = ["Bilal", "wajid"];
 
-// // Dot
-// console.log(student.firstName);
-// console.log(student.age);
-// const country = student.country;
+const studentInformationObject = {
+  firstName: "Qasem",
+  lastName: "Mohammadi",
+  age: 21,
+  country: "Afghanistan",
+  friends: ["Bilal", "Wajid"],
+};
 
-// // Square Bracket
-// console.log(student["firstName"]);
-// const lastName = student["lastName"];
+const name = "Name";
 
-// const name = "Name";
-// console.log;
+console.log(studentInformationObject);
+// Dot Notation
+console.log(studentInformationObject.age);
+
+// Square Bracket
+console.log(studentInformationObject["first" + name]);
+
+const farid = {
+  firstName: "Farid",
+  lastName: "Atayee",
+  job: "Web Developer",
+  country: "Afghanistan",
+  birthYear: 1998,
+  getAge: function () {
+    return 2023 - this.birthYear;
+  },
+  getFullName: function () {
+    return this.firstName + " " + this.lastName;
+  },
+};
+
+console.log(farid.getFullName());
+// const userChoice = prompt(
+//   `What do you want to know about Farshad?
+//    choose between name, job, age and country.`
+// );
+// if (farshad[userChoice] === undefined) {
+//   console.log("Choose between name, job, age and country.");
+// } else {
+//   console.log(farshad[userChoice]);
+// }
+
+// key value  (key:value)
