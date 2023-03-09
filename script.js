@@ -413,41 +413,41 @@ What is function?
 
 /// ================================== Objects ===================
 
-const studentInformation = ["qasem", "mohammadi", 21, "Afghanistan"];
-const friends = ["Bilal", "wajid"];
+// const studentInformation = ["qasem", "mohammadi", 21, "Afghanistan"];
+// const friends = ["Bilal", "wajid"];
 
-const studentInformationObject = {
-  firstName: "Qasem",
-  lastName: "Mohammadi",
-  age: 21,
-  country: "Afghanistan",
-  friends: ["Bilal", "Wajid"],
-};
+// const studentInformationObject = {
+//   firstName: "Qasem",
+//   lastName: "Mohammadi",
+//   age: 21,
+//   country: "Afghanistan",
+//   friends: ["Bilal", "Wajid"],
+// };
 
-const name = "Name";
+// const name = "Name";
 
-console.log(studentInformationObject);
-// Dot Notation
-console.log(studentInformationObject.age);
+// console.log(studentInformationObject);
+// // Dot Notation
+// console.log(studentInformationObject.age);
 
-// Square Bracket
-console.log(studentInformationObject["first" + name]);
+// // Square Bracket
+// console.log(studentInformationObject["first" + name]);
 
-const farid = {
-  firstName: "Farid",
-  lastName: "Atayee",
-  job: "Web Developer",
-  country: "Afghanistan",
-  birthYear: 1998,
-  getAge: function () {
-    return 2023 - this.birthYear;
-  },
-  getFullName: function () {
-    return this.firstName + " " + this.lastName;
-  },
-};
+// const farid = {
+//   firstName: "Farid",
+//   lastName: "Atayee",
+//   job: "Web Developer",
+//   country: "Afghanistan",
+//   birthYear: 1998,
+//   getAge: function () {
+//     return 2023 - this.birthYear;
+//   },
+//   getFullName: function () {
+//     return this.firstName + " " + this.lastName;
+//   },;o
+// };
 
-console.log(farid.getFullName());
+// console.log(farid.getFullName());
 // const userChoice = prompt(
 //   `What do you want to know about Farshad?
 //    choose between name, job, age and country.`
@@ -459,3 +459,57 @@ console.log(farid.getFullName());
 // }
 
 // key value  (key:value)
+
+// Loop حلقه
+
+// console.log("You lited Power 1");
+// console.log("You lifted Power 2");
+// console.log("You lifted Power 3");
+// console.log("You lifted Power 4");
+// console.log("You lifted Power 5");
+// console.log("You lifted Power 6");
+// console.log("You lifted Power 7");
+// console.log("You lifted Power 8");
+// console.log("You lifted Power 9");
+// console.log("You lifted Power 10");
+
+// Two kinds of Loops
+// 1. For loop
+// 2. While
+
+// for (let rep = 1; rep <= 10; rep++) {
+//   // The code that we want them to repeat
+//   console.log(`You lited the weights ${rep}`);
+// }
+
+// const mohammad = [
+//   1,
+//   "mohammad",
+//   "bahmani",
+//   38,
+//   ["bilal", "wajid", "computer"],
+//   true,
+//   10,
+// ];
+
+// let type = [];
+// for (let i = 0; i < mohammad.length; i++) {
+//   // Reading from an array
+//   if (typeof mohammad[i] === "boolean") continue;
+//   console.log(mohammad[i]);
+//   if (typeof mohammad[i] === "object") break;
+
+// Writing into an array
+
+// type += typeof mohammad[i];
+// type.push(typeof mohammad[i]);
+// }
+
+// console.log(type);
+
+// While Loop
+let i = 0;
+while (i < 10) {
+  console.log(`You lifted Weights ${i} `);
+  i++;
+}
