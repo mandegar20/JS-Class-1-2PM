@@ -508,8 +508,51 @@ What is function?
 // console.log(type);
 
 // While Loop
-let i = 0;
-while (i < 10) {
-  console.log(`You lifted Weights ${i} `);
-  i++;
-}
+// let i = 0;
+// while (i < 10) {
+//   console.log(`You lifted Weights ${i} `);
+//   i++;
+// }
+
+// document.querySelector("h1");
+// console.log(document.querySelector("h1"));
+// console.log(document.querySelector(".paragraph"));
+
+// DOM  Document Object Model
+
+/* 
+DOM: allow JS to select and manipulate to the HTML element. 
+
+Web API (Application Programming Interface)
+*/
+
+// const title = document.querySelector("#title");
+// const paragraph = document.querySelector(".paragraph");
+
+// // paragraph.textContent = "I am learning JS";
+// const textArea = document.querySelector(".text-area").value;
+// console.log(textArea);
+
+// const textInput = document.querySelector(".text-input").value;
+// console.log(textInput);
+
+// const ageInput = document.querySelector(".age-input").value;
+// console.log(Number(ageInput) + 18);
+
+// console.log(title);
+
+// document.querySelector("body").style.backgroundColor = "#1098ad";
+
+// document.querySelector("h1").style.fontFamily = "roboto";
+
+// Event handler
+
+const changeBtn = document.querySelector(".change-btn");
+
+const getAge = function getAge() {};
+
+changeBtn.addEventListener("click", function () {
+  document.querySelector("body").style.backgroundColor = "#1098ed";
+  document.querySelector("#title").textContent =
+    "Background Color is changed!!!";
+});
