@@ -547,12 +547,200 @@ Web API (Application Programming Interface)
 
 // Event handler
 
-const changeBtn = document.querySelector(".change-btn");
+// const changeBtn = document.querySelector(".change-btn");
 
-const getAge = function getAge() {};
+// const getAge = function getAge() {};
 
-changeBtn.addEventListener("click", function () {
-  document.querySelector("body").style.backgroundColor = "#1098ed";
-  document.querySelector("#title").textContent =
-    "Background Color is changed!!!";
-});
+// changeBtn.addEventListener("click", function () {
+//   document.querySelector("body").style.backgroundColor = "#1098ed";
+//   document.querySelector("#title").textContent =
+//     "Background Color is changed!!!";
+// });
+
+const restaurant = {
+  name: "Bukhara",
+  location: "PuleSurkh Square, Kabul",
+  categories: ["Afghani", "Soup", "Burger", "Vegetarian"],
+  starterMenu: ["Manto", "Ashak", "Soup", "Afghani Salad"],
+  mainMenu: ["Palaw", "Kebab", "Murgh Sigi"],
+  openingHours: {
+    thu: {
+      open: 12,
+      close: 22,
+    },
+    fri: {
+      open: 11,
+      close: 23,
+    },
+    sat: {
+      open: 0, // Open 24 hours
+      close: 24,
+    },
+  },
+  order: function (starterIndex, mainIndex) {
+    return `Your order is ready:
+     ${this.starterMenu[starterIndex]} 
+     and ${this.mainMenu[mainIndex]}`;
+  },
+};
+
+for (const day of Object.entries(restaurant.openingHours)) {
+  console.log(day);
+}
+
+// const order = restaurant.order(1, 2);
+// console.log(order);
+
+// const {
+//   name: resturantName,
+//   mainMenu: primary,
+//   openingHours: hours,
+// } = restaurant;
+// console.log(resturantName, primary, hours);
+
+// const restaurant = [
+//   "Bukhara",
+//   "PuleSurkh Square, Kabul",
+//   ["Afghani", "Soup", "Burger", "Vegetarian"],
+//   ["Manto", "Ashak", "Soup", "Afghani Salad"],
+//   ["Palaw", "Kebab", "Murgh Sigi"],
+// ];
+
+// Array   Object    Set   String
+// const arr1 = restaurant[0];
+// const arr2 = restaurant[1];
+// const arr3 = restaurant[2];
+
+// console.log(arr1, arr2, arr3);
+
+// const [first, third] = restaurant;
+// console.log(first, third);
+
+// // nested array
+// const arr1 = [1, 2, 3, [4, 5]];
+// const [x, y, , [z1, z2]] = arr1;
+// console.log(x, y, z1, z2);
+
+//
+
+// Spread Operator (bcz it is right side of equal )
+// const arr1 = [1, 2, 3, 4, 5];
+// const arr2 = [9, 8, ...arr1];
+// console.log(arr2);
+
+// copying two array
+// const first = ["desk", 29, "computer"];
+// const second = ["history", "english", "web Development"];
+
+// const third = [...first, ...second];
+// console.log(third);
+
+// const menu = [...restaurant.mainMenu, ...restaurant.starterMenu];
+// console.log(menu);
+
+// // Rest Operator (bcz it is in left side of equal)
+// const number = [10, 11, 12];
+// const [x, y, ...arr] = [8383, 282, 2828, 37, 28, 9, 92, 29];
+// console.log(...arr);
+
+// Short Circuiting
+// &&  ||
+
+// falsy Value: 0 null false "" undefined
+
+// ========== OR ============
+// True
+
+// console.log("============= OR ======================");
+// let webDesign;
+// console.log(null || false || "mohammad");
+// console.log(webDesign || true);
+// console.log(12 || webDesign || "salal" || "28383" || true);
+// console.log(null || 0 || "" || false || 0 || "" || null);
+
+// console.log("================= AND ====================");
+// // False
+// console.log(null && "jshs");
+// console.log("Moral" && "Rich" && undefined && 0 && "");
+// console.log("computer" && 1949 && true && [12, 83, "numbers"]);
+
+// ==========================================================
+// Looping arrays
+const students = ["mahmod", "Bilal", "mohamad", "Yasin"];
+
+for (let i = 0; i < students.length; i++) {
+  console.log(students[i]);
+}
+console.log("========================");
+for (let person of students) {
+  console.log(person);
+}
+
+const numbers = [1, 8, 19, 29, 38];
+for (let number of numbers) {
+  console.log(number + 10);
+}
+
+const rest = {
+  name: "Afghanistan Classic",
+  secondaryMenu: ["Ashak", "Manto"],
+  FistMenu: ["Palaw", "kebab", "Qabli"],
+};
+
+for (const info of Object.entries(rest)) {
+  console.log(info);
+}
+
+// Set
+// Unique
+const food = new Set([
+  "palaw",
+  "qabli",
+  "kebab",
+  "manto",
+  "drinks",
+  "palaw",
+  "qabli",
+  "qabli",
+  "qabli",
+  "qabli",
+  "qabli",
+  "qabli",
+  "qabli",
+  "qabli",
+  "qabl",
+]);
+console.log(food);
+food.add("Murg Biryan");
+
+const personnel = new Set();
+personnel.add("Reception");
+personnel.add("manager");
+personnel.add("worker");
+console.log(personnel);
+console.log(personnel.size);
+personnel.delete("worker");
+console.log(personnel);
+console.log(personnel.has("boss"));
+personnel.clear();
+console.log(personnel);
+
+// Map
+const obj = { name: "mohammad", lastName: "Bahmani" };
+const restuarantMap = new Map();
+restuarantMap.set("name", "Classic");
+restuarantMap.set(1, "Karte3, Pule Surkh , Kabul");
+restuarantMap.set(2, "Zaiton Bruno , Istanbul");
+
+console.log(restuarantMap);
+
+console.log(restuarantMap.size);
+restuarantMap.delete(2);
+console.log(restuarantMap);
+const branch = restuarantMap.get(1);
+console.log(branch);
+// restuarantMap.clear();
+console.log(restuarantMap);
+console.log(restuarantMap.has("name"));
+
+// JSON
