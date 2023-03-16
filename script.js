@@ -557,36 +557,36 @@ Web API (Application Programming Interface)
 //     "Background Color is changed!!!";
 // });
 
-const restaurant = {
-  name: "Bukhara",
-  location: "PuleSurkh Square, Kabul",
-  categories: ["Afghani", "Soup", "Burger", "Vegetarian"],
-  starterMenu: ["Manto", "Ashak", "Soup", "Afghani Salad"],
-  mainMenu: ["Palaw", "Kebab", "Murgh Sigi"],
-  openingHours: {
-    thu: {
-      open: 12,
-      close: 22,
-    },
-    fri: {
-      open: 11,
-      close: 23,
-    },
-    sat: {
-      open: 0, // Open 24 hours
-      close: 24,
-    },
-  },
-  order: function (starterIndex, mainIndex) {
-    return `Your order is ready:
-     ${this.starterMenu[starterIndex]} 
-     and ${this.mainMenu[mainIndex]}`;
-  },
-};
+// const restaurant = {
+//   name: "Bukhara",
+//   location: "PuleSurkh Square, Kabul",
+//   categories: ["Afghani", "Soup", "Burger", "Vegetarian"],
+//   starterMenu: ["Manto", "Ashak", "Soup", "Afghani Salad"],
+//   mainMenu: ["Palaw", "Kebab", "Murgh Sigi"],
+//   openingHours: {
+//     thu: {
+//       open: 12,
+//       close: 22,
+//     },
+//     fri: {
+//       open: 11,
+//       close: 23,
+//     },
+//     sat: {
+//       open: 0, // Open 24 hours
+//       close: 24,
+//     },
+//   },
+//   order: function (starterIndex, mainIndex) {
+//     return `Your order is ready:
+//      ${this.starterMenu[starterIndex]}
+//      and ${this.mainMenu[mainIndex]}`;
+//   },
+// };
 
-for (const day of Object.entries(restaurant.openingHours)) {
-  console.log(day);
-}
+// for (const day of Object.entries(restaurant.openingHours)) {
+//   console.log(day);
+// }
 
 // const order = restaurant.order(1, 2);
 // console.log(order);
@@ -666,81 +666,267 @@ for (const day of Object.entries(restaurant.openingHours)) {
 
 // ==========================================================
 // Looping arrays
-const students = ["mahmod", "Bilal", "mohamad", "Yasin"];
+// const students = ["mahmod", "Bilal", "mohamad", "Yasin"];
 
-for (let i = 0; i < students.length; i++) {
-  console.log(students[i]);
-}
-console.log("========================");
-for (let person of students) {
-  console.log(person);
-}
+// for (let i = 0; i < students.length; i++) {
+//   console.log(students[i]);
+// }
+// console.log("========================");
+// for (let person of students) {
+//   console.log(person);
+// }
 
-const numbers = [1, 8, 19, 29, 38];
-for (let number of numbers) {
-  console.log(number + 10);
-}
+// const numbers = [1, 8, 19, 29, 38];
+// for (let number of numbers) {
+//   console.log(number + 10);
+// }
 
-const rest = {
-  name: "Afghanistan Classic",
-  secondaryMenu: ["Ashak", "Manto"],
-  FistMenu: ["Palaw", "kebab", "Qabli"],
+// const rest = {
+//   name: "Afghanistan Classic",
+//   secondaryMenu: ["Ashak", "Manto"],
+//   FistMenu: ["Palaw", "kebab", "Qabli"],
+// };
+
+// for (const info of Object.entries(rest)) {
+//   console.log(info);
+// }
+
+// // Set
+// // Unique
+// const food = new Set([
+//   "palaw",
+//   "qabli",
+//   "kebab",
+//   "manto",
+//   "drinks",
+//   "palaw",
+//   "qabli",
+//   "qabli",
+//   "qabli",
+//   "qabli",
+//   "qabli",
+//   "qabli",
+//   "qabli",
+//   "qabli",
+//   "qabl",
+// ]);
+// console.log(food);
+// food.add("Murg Biryan");
+
+// const personnel = new Set();
+// personnel.add("Reception");
+// personnel.add("manager");
+// personnel.add("worker");
+// console.log(personnel);
+// console.log(personnel.size);
+// personnel.delete("worker");
+// console.log(personnel);
+// console.log(personnel.has("boss"));
+// personnel.clear();
+// console.log(personnel);
+
+// // Map
+// const obj = { name: "mohammad", lastName: "Bahmani" };
+// const restuarantMap = new Map();
+// restuarantMap.set("name", "Classic");
+// restuarantMap.set(1, "Karte3, Pule Surkh , Kabul");
+// restuarantMap.set(2, "Zaiton Bruno , Istanbul");
+
+// console.log(restuarantMap);
+
+// console.log(restuarantMap.size);
+// restuarantMap.delete(2);
+// console.log(restuarantMap);
+// const branch = restuarantMap.get(1);
+// console.log(branch);
+// // restuarantMap.clear();
+// console.log(restuarantMap);
+// console.log(restuarantMap.has("name"));
+
+// // JSON
+
+// OOP : Object Oriented programming
+// Class: blueprint
+// Instance (Object)
+
+/*
+// Four Core Concepts:
+1. Abstraction: hide some parts of code 
+2. Encapsulation:  
+3. Inheritance:
+4. PolyMorphism 
+
+*/
+/*
+// // OOP in JavaScript 
+// Class ---> Object
+// 1. property 
+// 2. method 
+
+// prototype  <--- Object
+
+// 1. Constructor Function 
+// 2. ES6 Classes 
+// 3. Object.create()
+
+// */
+
+// /*
+// 1. Constructor
+// 2. instance
+// 3. method
+// */
+
+// // const Person = function (firstName, birthYear) {
+// //   this.firstName = firstName;
+// //   this.birthYear = birthYear;
+
+// //   // const getAge = function () {
+// //   //   return 2023 - this.birthYear;
+// //   // };
+// // };
+
+// // const person = new Person("mohammad", "1995");
+// // const person1 = new Person("mahmod", "2009");
+// // const person2 = new Person("wajid", "2022");
+// // console.log(person);
+// // console.log(person1);
+// // console.log(person2);
+
+// /*
+// 1. {}
+// 2. function called, this {}
+// 3. {} --> prototype
+// 4. {} returned
+
+// */
+
+// // console.log(person.birthYear);
+// // console.log(person.__proto__ === Person.prototype);
+// // console.log(person instanceof Person);
+// // Person.prototype.calcAge = function () {
+// //   console.log(2023 - this.birthYear);
+// // };
+
+// // console.log(Person.prototype.isPrototypeOf(person));
+// // console.log(person.hasOwnProperty("birthYear"));
+
+// // const person = class {
+
+// // }
+
+// class PersonCl {
+//   constructor(firstName, BirthYear) {
+//     this.firstName = firstName;
+//     this.BirthYear = BirthYear;
+//   }
+//   calcAge() {
+//     console.log(2023 - this.BirthYear);
+//   }
+// }
+
+// const ahmad = new PersonCl("ahmad", 1996);
+// console.log(ahmad);
+
+// ahmad.calcAge();
+// PersonCl.prototype.greet = function () {
+//   console.log(`hey ${this.firstName}`);
+// };
+
+// ahmad.greet();
+
+// const StudentProto = {
+//   calcAge() {
+//     console.log(2023 - this.BirthYear);
+//   },
+// };
+
+// const steven = Object.create(StudentProto);
+// console.log(steven);
+// steven.firstName = "Steven";
+// steven.BirthYear = 1990;
+// steven.calcAge();
+// console.log(steven.__proto__ === StudentProto);
+
+/* 
+constructor  prototype 
+
+*/
+
+const Employee = function (firstName, birthYear) {
+  this.firstName = firstName;
+  this.birthYear = birthYear;
+
+  // const getAge = function () {
+  //   console.log(2023 - this.birthYear);
+  // };
 };
 
-for (const info of Object.entries(rest)) {
-  console.log(info);
+const ahmad = new Employee("ahmad", 2000);
+console.log(ahmad);
+Employee.prototype.getAge = function () {
+  console.log(2023 - this.birthYear);
+};
+
+ahmad.getAge();
+console.log(ahmad);
+
+// console.log(ahmad.__proto__ === Employee.prototype);
+const bilal = new Employee("bilal", 1990);
+console.log(bilal);
+console.log(bilal.__proto__ === Employee.prototype);
+//
+
+/* 
+Object  
+__proto__
+prototype: null
+
+Constructor
+__proto__
+Object.prototype
+
+Instance  
+__proto__
+Constructor.prototype   
+
+*/
+
+// ================ ES6 Classes ==================================
+
+// Expression
+// const emplyee = class{
+
+// }
+
+// Declaration
+class EmplyeeCl {
+  constructor(firstName, birthYear) {
+    this.firstName = firstName;
+    this.birthYear = birthYear;
+  }
+
+  getAge() {
+    console.log(2023 - this.birthYear);
+  }
 }
 
-// Set
-// Unique
-const food = new Set([
-  "palaw",
-  "qabli",
-  "kebab",
-  "manto",
-  "drinks",
-  "palaw",
-  "qabli",
-  "qabli",
-  "qabli",
-  "qabli",
-  "qabli",
-  "qabli",
-  "qabli",
-  "qabli",
-  "qabl",
-]);
-console.log(food);
-food.add("Murg Biryan");
+const ahmadCl = new EmplyeeCl("ahmad", 2000);
+console.log(ahmadCl);
 
-const personnel = new Set();
-personnel.add("Reception");
-personnel.add("manager");
-personnel.add("worker");
-console.log(personnel);
-console.log(personnel.size);
-personnel.delete("worker");
-console.log(personnel);
-console.log(personnel.has("boss"));
-personnel.clear();
-console.log(personnel);
+const sarwary = new EmplyeeCl("Zekrya", 1990);
+sarwary.getAge();
+console.log(sarwary);
 
-// Map
-const obj = { name: "mohammad", lastName: "Bahmani" };
-const restuarantMap = new Map();
-restuarantMap.set("name", "Classic");
-restuarantMap.set(1, "Karte3, Pule Surkh , Kabul");
-restuarantMap.set(2, "Zaiton Bruno , Istanbul");
+const EmployeeProto = {
+  getAge() {
+    console.log(2023 - this.birthYear);
+  },
+};
 
-console.log(restuarantMap);
+const wajid = Object.create(EmployeeProto);
+wajid.birthYear = 1995;
+wajid.firstName = "wajid";
 
-console.log(restuarantMap.size);
-restuarantMap.delete(2);
-console.log(restuarantMap);
-const branch = restuarantMap.get(1);
-console.log(branch);
-// restuarantMap.clear();
-console.log(restuarantMap);
-console.log(restuarantMap.has("name"));
-
-// JSON
+console.log(wajid);
+wajid.getAge();
