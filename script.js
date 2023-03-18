@@ -853,28 +853,28 @@ constructor  prototype
 
 */
 
-const Employee = function (firstName, birthYear) {
-  this.firstName = firstName;
-  this.birthYear = birthYear;
+// const Employee = function (firstName, birthYear) {
+//   this.firstName = firstName;
+//   this.birthYear = birthYear;
 
-  // const getAge = function () {
-  //   console.log(2023 - this.birthYear);
-  // };
-};
+//   // const getAge = function () {
+//   //   console.log(2023 - this.birthYear);
+//   // };
+// };
 
-const ahmad = new Employee("ahmad", 2000);
-console.log(ahmad);
-Employee.prototype.getAge = function () {
-  console.log(2023 - this.birthYear);
-};
+// const ahmad = new Employee("ahmad", 2000);
+// console.log(ahmad);
+// Employee.prototype.getAge = function () {
+//   console.log(2023 - this.birthYear);
+// };
 
-ahmad.getAge();
-console.log(ahmad);
+// ahmad.getAge();
+// console.log(ahmad);
 
-// console.log(ahmad.__proto__ === Employee.prototype);
-const bilal = new Employee("bilal", 1990);
-console.log(bilal);
-console.log(bilal.__proto__ === Employee.prototype);
+// // console.log(ahmad.__proto__ === Employee.prototype);
+// const bilal = new Employee("bilal", 1990);
+// console.log(bilal);
+// console.log(bilal.__proto__ === Employee.prototype);
 //
 
 /* 
@@ -900,33 +900,193 @@ Constructor.prototype
 // }
 
 // Declaration
-class EmplyeeCl {
-  constructor(firstName, birthYear) {
-    this.firstName = firstName;
-    this.birthYear = birthYear;
-  }
+// class EmplyeeCl {
+//   constructor(firstName, birthYear) {
+//     this.firstName = firstName;
+//     this.birthYear = birthYear;
+//   }
 
-  getAge() {
-    console.log(2023 - this.birthYear);
-  }
-}
+//   getAge() {
+//     console.log(2023 - this.birthYear);
+//   }
+// }
 
-const ahmadCl = new EmplyeeCl("ahmad", 2000);
-console.log(ahmadCl);
+// const ahmadCl = new EmplyeeCl("ahmad", 2000);
+// console.log(ahmadCl);
 
-const sarwary = new EmplyeeCl("Zekrya", 1990);
-sarwary.getAge();
-console.log(sarwary);
+// const sarwary = new EmplyeeCl("Zekrya", 1990);
+// sarwary.getAge();
+// console.log(sarwary);
 
-const EmployeeProto = {
+// const EmployeeProto = {
+//   getAge() {
+//     console.log(2023 - this.birthYear);
+//   },
+// };
+
+// const wajid = Object.create(EmployeeProto);
+// wajid.birthYear = 1995;
+// wajid.firstName = "wajid";
+
+// console.log(wajid);
+// wajid.getAge();
+
+//
+// const Person = function (firstName, birthYear) {
+//   this.firstName = firstName;
+//   this.birthYear = birthYear;
+// };
+
+// Person.prototype.calcAge = function () {
+//   console.log(2023 - this.birthYear);
+// };
+
+// const Student = function (firstName, birthYear, course) {
+//   Person.call(this, firstName, birthYear);
+//   this.course = course;
+// };
+
+// // Student.prototype = Object.create(Person.prototype);
+
+// Student.prototype.introduce = function () {
+//   console.log(`My name is ${this.firstName} and I study ${this.course}`);
+// };
+
+// const rabia = new Student("rabia", 2004, "web design");
+// rabia.introduce();
+// console.log(rabia);
+
+// class PersonCl {
+//   constructor(fullName, birthYear) {
+//     this.fullName = fullName;
+//     this.birthYear = birthYear;
+//   }
+//   calcAge() {
+//     console.log(2023 - this.birthYear);
+//   }
+
+//   greet() {}
+// }
+
+// class StudentCl extends PersonCl{
+//   super (fullName, birthYear)
+
+// }
+// const PersonProto = {
+//   calcAge() {
+//     console.log(2023 - this.birthYear);
+//   },
+//   init(firstName, birthYear) {
+//     this.firstName = firstName;
+//     this.birthYear = birthYear;
+//   },
+// };
+
+// const StudentProto = Object.create(PersonProto);
+// StudentProto.init = function (firstName, birthYear, course) {
+//   PersonProto.init.call(this, firstName, birthYear);
+//   this.course = course;
+// };
+// const jay = Object.create(StudentProto);
+// jay.init( )
+
+// Inheritance
+// Person ( Student, Teacher)
+
+// 1. Constructor
+// 2. Class
+// 3. Object.create()
+
+// const Person = function (firstName, birthYear) {
+//   this.firstName = firstName;
+//   this.birthYear = birthYear;
+// };
+
+// Person.prototype.getAge = function () {
+//   console.log(2023 - this.birthYear);
+// };
+
+// const ahmad = new Person("ahmad", 2022);
+// console.log(ahmad);
+// ahmad.getAge();
+// ahmad.getAge();
+
+// const Student = function (firstName, birthYear, course) {
+//   Person.call(this, firstName, birthYear);
+//   this.course = course;
+// };
+
+// Student.prototype = Object.create(Person.prototype);
+// Student.prototype.introduce = function () {
+//   console.log(`hey, I am ${this.firstName} and I am studying ${this.course}`);
+// };
+// const jawid = new Student("Jawid", 2001, "Web Design");
+// jawid.introduce();
+// jawid.getAge();
+// console.log(jawid);
+
+/* 
+Prototype chain 
+object
+constuctor(person)
+Student
+
+*/
+
+// class PersonCl {
+//   constructor(firstName, birthYear) {
+//     this.firstName = firstName;
+//     this.birthYear = birthYear;
+//   }
+
+//   getAge() {
+//     console.log(2023 - this.birthYear);
+//   }
+// }
+
+// const mohammad = new PersonCl("mohammad", 1990);
+// console.log(mohammad);
+
+// class StudentCl extends PersonCl {
+//   constructor(firstName, birthYear, course) {
+//     super(firstName, birthYear);
+//     this.course = course;
+//   }
+
+//   introduce() {
+//     console.log(
+//       `Hi, I am ${this.firstName} and I am ${
+//         2023 - this.birthYear
+//       }years old and I am studying ${this.course}}`
+//     );
+//   }
+// }
+
+// const hamed = new StudentCl("Hamed", 1900, "computer");
+// console.log(hamed);
+// hamed.introduce();
+// hamed.getAge();
+
+const PersonProto = {
   getAge() {
     console.log(2023 - this.birthYear);
   },
+  init(firsName, birthYear) {
+    this.firstName = firsName;
+    this.birthYear = birthYear;
+  },
 };
 
-const wajid = Object.create(EmployeeProto);
-wajid.birthYear = 1995;
-wajid.firstName = "wajid";
+const ali = Object.create(PersonProto);
+ali.firsName = "Ali";
 
-console.log(wajid);
-wajid.getAge();
+console.log(ali);
+
+let StudentProto = {
+  introduce() {
+    console.log(`hi I am ${this.firsName}`);
+  },
+};
+
+StudentProto = Object.create(PersonProto);
+const gul = Object.create(StudentProto);.
